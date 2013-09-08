@@ -1,0 +1,30 @@
+function git_branch_name {
+  val=`git branch 2>/dev/null | grep '^*' | colrm 1 2`
+  echo "$val"
+}
+
+function git-on-master {
+  branch=`git_branch_name`
+  git checkout master && git pull --rebase 
+  git checkout $branch
+  git rebase master
+}
+
+function g {
+  if [[ $# > 0 ]]; then
+    git $@
+  else
+    git s
+  fi
+}
+compdef g=git
+
+function commit-and-status {
+  git commit -m $1 && g
+}
+
+# [TODO] write add-and-status, unstage-and-status functions!
+
+function rrg {
+  rake routes | grep $1
+}

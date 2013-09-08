@@ -1,0 +1,118 @@
+[user]
+	name = Jan-Philipp Dombrowski
+	email = jpdombrowski@gmail.com
+[url "https://git.louis-net.de/"]
+	insteadOf = lia:
+[url "https://github.com/"]
+	insteadOf = gh:
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+	ui = true
+[alias]
+	fetch = fetch --tags # always grab all tags
+	f = fetch
+	ft = fetch --tags
+	a = add .
+	ac = commit -a
+	ask = add --patch
+	shell = add --interactive
+	sh = add --interactive
+	#lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	#lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	s = status -s -b
+	st = status -s -b
+	c = checkout
+	cb = checkout -b
+	co = checkout
+	ct = checkout -t
+	cm = checkout master
+  cool = checkout online
+	cd = checkout develop
+	cl = clone
+	ci = commit
+	cs = commit --signoff
+	csh = commit --interactive
+	ca = commit -a
+	cash = commit --amend --interactive
+	cia = commit --amend
+	sign = commit --amend --signoff
+	so = commit --amend --signoff
+	fix = commit --amend -C HEAD # git fix some/file
+	p = push origin HEAD
+	pa = push
+	po = push origin
+	pom = push origin master
+	pr = pull --rebase
+	pop = stash pop
+	l = log --graph --pretty=format:'%C(yellow)%h%Cred%d%Creset %s %Cgreen(%cr %an)%Creset' --abbrev-commit --date=relative --date-order
+	la = log --graph --all --pretty=format:'%C(yellow)%h%Cred%d%Creset %s %Cgreen(%cr %an)%Creset' --abbrev-commit --date=relative --date-order
+	#lg = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr %an)%Creset' --abbrev-commit --date=relative
+	ll = log --graph --decorate --stat --date-order
+	lla = log --graph --decorate --stat --all --date-order
+	lc = log -n1 --oneline
+	lso = ls-files -o
+	lost = !"git fsck --lost-found | awk '/dangling commit/ {print $3}' | git show --format='SHA1: %C(yellow)%h%Creset %f' --stdin | awk '/SHA1/ {sub(\"SHA1: \", \"\"); print}'"
+	d = diff
+	ds = diff --staged
+	dc = diff --cached
+	dh = diff HEAD
+	dl = diff HEAD~1
+	dm = diff master..HEAD
+	do = diff ORIG_HEAD...HEAD
+	ignore = update-index --assume-unchanged
+	unignore = update-index --no-assume-unchanged
+	i = update-index --assume-unchanged
+	ui = update-index --no-assume-unchanged
+	m = merge
+	md = merge develop
+	mm = merge master
+	noff = merge --no-ff
+	nff = merge --no-ff --no-edit
+	ff = merge --ff-only
+	ffm = merge --ff-only master
+	nffm = merge --no-ff --no-edit master
+	ffd = merge --ff-only develop
+	nffd = merge --no-ff --no-edit develop
+	abort = merge --abort
+	b = branch
+	br = branch -r
+	bm = branch -a --merged
+	bu = branch -a --no-merged
+	bnm = branch -a --no-merged
+	subup = submodule update --init --recursive
+	su = submodule update --init --recursive
+	rh = reset HEAD
+	fuck = reset --soft HEAD~1
+	uncommit = reset --soft HEAD~1
+	undo = reset --hard HEAD~1
+	unmerge = reset --merge ORIG_HEAD
+	nw = new-workdir
+	rev = rev-parse --short
+	head = rev-parse --short HEAD
+	r = revert
+	rnc = revert --no-commit
+	squash = rebase -i
+	cp = cherry-pick
+	g = grep
+	rc = rebase --continue
+	ra = rebase --abort
+	rs = rebase --skip
+[git-up "bundler"]
+	check = false
+	autoinstall = false
+[git-up "rebase"]
+	arguments = --preserve-merges
+[core]
+	excludesfile = ~/.gitignore
+	editor = vim
+[merge]
+	renamelimit = 5000
+[branch]
+	autosetuprebase = remote
+[push]
+	default = matching
+[credential]
+	helper = store
