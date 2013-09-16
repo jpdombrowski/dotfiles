@@ -3,6 +3,11 @@ color railscasts
 
 set showcmd
 
+set hidden
+
+set autoindent
+set smartindent
+
 " More natural feeling split positions.
 set splitright
 set splitbelow
