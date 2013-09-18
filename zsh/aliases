@@ -10,6 +10,7 @@ alias vim="stty stop '' -ixoff ; vim"
 ttyctl -f
 alias vi="vim"
 alias v="vim"
+alias tlf='tail -f'
 
 # sublime text 2
 alias sb="subl"
