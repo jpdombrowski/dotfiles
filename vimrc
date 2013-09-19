@@ -8,6 +8,8 @@ set hidden
 set autoindent
 set smartindent
 
+set cursorline
+
 " More natural feeling split positions.
 set splitright
 set splitbelow
