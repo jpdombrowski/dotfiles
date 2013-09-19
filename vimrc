@@ -40,6 +40,9 @@ set formatoptions-=ro
 map <C-s> <esc>:w<CR>
 imap <C-s> <esc>:w<CR>
 
+" exit insert mode not leavin home row
+inoremap jk <esc>
+
 " this is redundant...
 nmap k gk
 nmap j gj
