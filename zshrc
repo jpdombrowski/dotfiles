@@ -67,7 +67,7 @@ alias notes="cd ~/Dropbox/Notes"
 
 export EDITOR="vim"
 
-export TERM="xterm-256color"
+export TERM="screen-256color"
 
 # prompt
 # PROMPT='[${SSH_CONNECTION+"%n@%m:"}%~] '
