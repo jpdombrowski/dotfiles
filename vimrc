@@ -1,6 +1,7 @@
 set t_Co=256
-color railscasts
 set t_ut=
+" color railscasts
+color xoria256
 
 set showcmd
 
