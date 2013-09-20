@@ -11,6 +11,7 @@ set autoindent
 set smartindent
 
 set cursorline
+set colorcolumn=80
 
 " More natural feeling split positions.
 set splitright
