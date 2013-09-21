@@ -11,6 +11,8 @@ ttyctl -f
 alias vi="vim"
 alias v="vim"
 alias tlf='tail -f'
+alias tat='tmux attach -t'
+compdef tat=tmux
 
 # sublime text 2
 alias sb="subl"
