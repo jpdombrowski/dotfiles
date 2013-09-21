@@ -42,9 +42,9 @@ chpwd() {
 }
 
 # Save a ton of history
-HISTSIZE=20000
+HISTSIZE=4096
 HISTFILE=~/.zsh_history
-SAVEHIST=20000
+SAVEHIST=4096
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
