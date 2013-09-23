@@ -50,6 +50,9 @@ inoremap jk <esc>
 nmap k gk
 nmap j gj
 
+imap <C-b> <C-o>^
+imap <C-e> <C-o>$
+
 " quick new tab
 map <C-t> <esc>:tabnew<CR>
 
