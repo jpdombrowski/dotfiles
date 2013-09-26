@@ -21,6 +21,10 @@ set splitbelow
 set undofile
 set undodir=~/.vim/undodir
 
+" no swap, no backup
+set noswapfile
+set nobackup
+
 " Smarter indenting.
 set shiftround
 
