@@ -62,6 +62,8 @@ map <C-t> <esc>:tabnew<CR>
 
 " get rid of highlighting of last search result
 nnoremap <CR> :noh<CR><CR>
+" might be better
+nnoremap <leader>h :noh<CR>
 
 " buffergator toggle (needs to be in .vimrc.before with janus)
 nnoremap <leader>b :BuffergatorToggle<CR>
