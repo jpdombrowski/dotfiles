@@ -1,3 +1,4 @@
 let mapleader = ","
 set formatoptions-=ro
 call janus#disable_plugin('css-color')
+nnoremap <leader>b :BuffergatorToggle<CR>

@@ -63,6 +63,11 @@ map <C-t> <esc>:tabnew<CR>
 " get rid of highlighting of last search result
 nnoremap <CR> :noh<CR><CR>
 
+" buffergator toggle (needs to be in .vimrc.before with janus)
+nnoremap <leader>b :BuffergatorToggle<CR>
+" buffergator splits horizontal bottom (full screen width)
+let g:buffergator_viewport_split_policy = "B"
+
 nnoremap <Up>    3<C-w>-
 nnoremap <Down>  3<C-w>+
 nnoremap <Left>  3<C-w><
