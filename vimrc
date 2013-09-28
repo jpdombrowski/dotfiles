@@ -34,6 +34,11 @@ set nofoldenable
 " Don't wait so long for next keypress...
 set timeoutlen=500
 
+" Automatically reload vimrc when it's saved
+au BufWritePost .vimrc so ~/.vimrc
+au BufWritePost .vimrc.after so ~/.vimrc
+au BufWritePost .vimrc.before so ~/.vimrc
+
 let mapleader = ","
 
 " Disable things nobody needs.
@@ -43,6 +48,9 @@ map K <Nop>
 " Don't add the comment prefix when I hit enter or o/O on a comment line.
 set formatoptions-=ro
 
+" Visualize wrapped lines when wrap toggled
+set showbreak=↪
+
 " exit insert mode and save file
 map <C-s> <esc>:w<CR>
 imap <C-s> <esc>:w<CR>
@@ -50,10 +58,27 @@ imap <C-s> <esc>:w<CR>
 " exit insert mode not leavin home row
 inoremap jk <esc>
 
-" this is redundant...
+" Select all
+map <Leader>a ggVG
+
+" Show current file in NERDTree
+map <silent> <C-s> :NERDTree<CR><C-w>p:NERDTreeFind<CR>
+
+" Open last/alternate buffer
+map <Leader><Leader> <C-^>
+
+" Improve up / down movement on wrapped lines
 nmap k gk
 nmap j gj
 
+" Keep search pattern at the center of the screen
+nnoremap <silent> n nzz
+nnoremap <silent> N Nzz
+nnoremap <silent> * *zz
+nnoremap <silent> # #zz
+nnoremap <silent> g* g*zz
+
+" Jump to beginning / end of line in insert mode
 imap <C-b> <C-o>^
 imap <C-e> <C-o>$
 
