@@ -62,7 +62,7 @@ inoremap jk <esc>
 map <Leader>a ggVG
 
 " Show current file in NERDTree
-map <silent> <C-s> :NERDTree<CR><C-w>p:NERDTreeFind<CR>
+map <silent> <Leader>s :NERDTree<CR><C-w>p:NERDTreeFind<CR>
 
 " Open last/alternate buffer
 map <Leader><Leader> <C-^>
