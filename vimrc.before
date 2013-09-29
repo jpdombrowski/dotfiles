@@ -1,4 +1,7 @@
 let mapleader = ","
 set formatoptions-=ro
 call janus#disable_plugin('css-color')
+call janus#disable_plugin('narrowregion')
+call janus#disable_plugin('easymotion')
+call janus#disable_plugin('vimwiki')
 nnoremap <leader>b :BuffergatorToggle<CR>
