@@ -3,6 +3,9 @@ set t_ut=
 " color railscasts
 color xoria256_new
 
+" don't show vim mode
+set noshowmode
+
 set showcmd
 
 set hidden
