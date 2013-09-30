@@ -68,7 +68,7 @@ map <Leader>a ggVG
 map <silent> <Leader>s :NERDTree<CR><C-w>p:NERDTreeFind<CR>
 
 " Open last/alternate buffer
-map <Leader><Leader> <C-^>
+map <Leader><Space> <C-^>
 
 " Improve up / down movement on wrapped lines
 nmap k gk
