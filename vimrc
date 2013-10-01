@@ -113,3 +113,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
