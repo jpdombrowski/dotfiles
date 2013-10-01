@@ -98,6 +98,9 @@ nnoremap <leader>b :BuffergatorToggle<CR>
 " buffergator splits horizontal bottom (full screen width)
 let g:buffergator_viewport_split_policy = "B"
 
+" vim-slime
+let g:slime_target = "tmux"
+
 nnoremap <Up>    3<C-w>-
 nnoremap <Down>  3<C-w>+
 nnoremap <Left>  3<C-w><
