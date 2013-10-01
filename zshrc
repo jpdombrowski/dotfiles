@@ -73,4 +73,4 @@ export TERM="xterm-256color"
 # PROMPT='[${SSH_CONNECTION+"%n@%m:"}%~] '
 
 # Customize to your needs...
-export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/dombrowski/.rvm/bin:/home/dombrowski/.rvm/bin
+export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:$HOME/.rvm/bin:$HOME/.rvm/bin:$HOME/.local/bin
