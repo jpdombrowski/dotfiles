@@ -1,5 +1,4 @@
 # Unix
-# pretty directoy list
 alias ll="ls -lahG"
 alias l="ll"
 alias ln='ln -v'
@@ -13,6 +12,9 @@ alias v="vim"
 alias tlf='tail -f'
 alias tat='tmux attach -t'
 compdef tat=tmux
+
+# Make aliases work with sudo
+alias sudo='sudo '
 
 # sublime text 2
 alias sb="subl"
