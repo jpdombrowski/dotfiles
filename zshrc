@@ -36,6 +36,8 @@ DISABLE_AUTO_TITLE="true"
 # much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
+DISABLE_CORRECTION="true"
+
 # Show contents of directory after cd-ing into it
 chpwd() {
   ls -lhG
