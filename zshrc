@@ -60,6 +60,8 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.dotfiles/zsh/aliases
 source $HOME/.dotfiles/zsh/functions
 
+source $HOME/.dotfiles/zsh/completion/tmuxinator.zsh
+
 # open ssh on devel
 alias devel="ssh dombrowski@devel"
 
