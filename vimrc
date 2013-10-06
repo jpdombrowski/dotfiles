@@ -100,6 +100,7 @@ let g:buffergator_viewport_split_policy = "B"
 
 " vim-slime
 let g:slime_target = "tmux"
+let g:slime_default_config = {"socket_name": "default", "target_pane": "1.2"}
 
 nnoremap <Up>    3<C-w>-
 nnoremap <Down>  3<C-w>+
