@@ -37,6 +37,9 @@ set nofoldenable
 " Don't wait so long for next keypress...
 set timeoutlen=500
 
+" Show extra whitespace
+set list listchars=tab:»·,trail:·
+
 " Automatically reload vimrc when it's saved
 au BufWritePost .vimrc so ~/.vimrc
 au BufWritePost .vimrc.after so ~/.vimrc
