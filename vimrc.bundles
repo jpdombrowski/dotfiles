@@ -1,0 +1,16 @@
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let vundle manage Vundle
+Bundle 'gmarik/vundle'
+
+" Define bundles via Github repos
+Bundle 'kien/ctrlp.vim'
+let g:ctrlp_map = ''
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\.png$\|\.PNG$\|\.JPG$\|\.jpg$\|\.GIF$\|\.gif$\|\.pyc$\|\.pyo$\|\.rbc$|\.rbo$\|\.class$\|\.o$\|\~$\',
+  \ }
+
+
