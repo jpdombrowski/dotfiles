@@ -172,7 +172,7 @@ nmap <silent> <F4> :set invpaste<CR>
 imap <silent> <F4> <ESC>:set invpaste<CR>
 
 " set text wrapping toggles
-nmap <silent> <leader>tw :set invwrap<CR
+nmap <silent> <leader>tw :set invwrap<CR>
 
 " Bubble single lines
 nmap <C-Up> [e
