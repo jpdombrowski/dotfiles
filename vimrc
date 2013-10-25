@@ -1,5 +1,7 @@
 set nocompatible      " Use vim, no vi defaults
 
+let mapleader = ","
+
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
@@ -83,6 +85,14 @@ endif
 " Save when losing focus (does not work in ubuntu terminal)
 au FocusLost * silent! wa
 
+" When editing a file, always jump to the last known cursor position.
+" Don't do it for commit messages, when the position is invalid, or when
+" inside an event handler (happens when dropping a file on gvim).
+autocmd BufReadPost *
+  \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
+  \   exe "normal g`\"" |
+  \ endif
+
 " Searching
 set hlsearch    " highlight matches
 set incsearch   " incremental searching
@@ -125,19 +135,23 @@ endif
 
 " buffergator splits horizontal bottom (full screen width)
 let g:buffergator_viewport_split_policy = "B"
+" map <leader>b :BuffergatorToggle<CR>
+" nnoremap <leader>b :BuffergatorToggle<CR>
 
 " vim-slime
 let g:slime_target = "tmux"
 let g:slime_default_config = {"socket_name": "default", "target_pane": "1.2"}
 
+let g:NumberToggleTrigger="<leader>tn"
+
 " Show current file in NERDTree
 map <silent> <Leader>s :NERDTree<CR><C-w>p:NERDTreeFind<CR>:set cursorline<CR>
 
 
-" buffergator toggle (needs to be in .vimrc.before with janus)
-nnoremap <leader>b :BuffergatorToggle<CR>
 
 
+map <C-F> :Ag<space>
+map <leader>n :NERDTreeToggle<CR> :NERDTreeMirror<CR>
 
 
 
@@ -147,7 +161,8 @@ nnoremap <leader>b :BuffergatorToggle<CR>
 " Kill Trailing Whitespaces
 command! KillWhitespace :normal :%s/ *$//g<cr><c-o><cr>
 
-let mapleader = ","
+" Use sudo to write file
+command W w !sudo tee % > /dev/null
 
 " Disable things nobody needs.
 map Q <Nop>
@@ -188,28 +203,6 @@ vmap <C-Down> ]egv
 vmap <C-k> [egv
 vmap <C-j> ]egv
 
-" Map Control-# to switch tabs
-map  <C-0> 0gt
-imap <C-0> <Esc>0gt
-map  <C-1> 1gt
-imap <C-1> <Esc>1gt
-map  <C-2> 2gt
-imap <C-2> <Esc>2gt
-map  <C-3> 3gt
-imap <C-3> <Esc>3gt
-map  <C-4> 4gt
-imap <C-4> <Esc>4gt
-map  <C-5> 5gt
-imap <C-5> <Esc>5gt
-map  <C-6> 6gt
-imap <C-6> <Esc>6gt
-map  <C-7> 7gt
-imap <C-7> <Esc>7gt
-map  <C-8> 8gt
-imap <C-8> <Esc>8gt
-map  <C-9> 9gt
-imap <C-9> <Esc>9gt
-
 " upper/lower word
 nmap <leader>u mQviwU`Q
 nmap <leader>l mQviwu`Q
@@ -248,6 +241,12 @@ nnoremap <CR> :noh<CR><CR>
 " might be better
 nnoremap <leader>h :noh<CR>
 
+" easy split navigation
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+
 nnoremap <Up>    3<C-w>-
 nnoremap <Down>  3<C-w>+
 nnoremap <Left>  3<C-w><
@@ -257,12 +256,6 @@ nnoremap <Right> 3<C-w>>
 " nnoremap <Right> :echoe "Use l"<CR>
 " nnoremap <Up> :echoe "Use k"<CR>
 " nnoremap <Down> :echoe "Use j"<CR>
-
-" easy split navigation
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-h> <C-w>h
-nnoremap <C-l> <C-w>l
 
 color xoria256
 
