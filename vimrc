@@ -246,10 +246,10 @@ nnoremap <CR> :noh<CR><CR>
 " might be better
 nnoremap <leader>h :noh<CR>
 
-"nnoremap <Up>    3<C-w>-
-"nnoremap <Down>  3<C-w>+
-"nnoremap <Left>  3<C-w><
-"nnoremap <Right> 3<C-w>>
+nnoremap <Up>    3<C-w>-
+nnoremap <Down>  3<C-w>+
+nnoremap <Left>  3<C-w><
+nnoremap <Right> 3<C-w>>
 
 " nnoremap <Left> :echoe "Use h"<CR>
 " nnoremap <Right> :echoe "Use l"<CR>
