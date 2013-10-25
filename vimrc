@@ -7,6 +7,7 @@ endif
 filetype plugin indent on " Turn on filetype plugins
 
 set number            " Show line numbers
+set numberwidth=5     " Bit more breathing room
 set ruler             " Show line and column number
 syntax enable         " Turn on syntax highlighting allowing local overrides
 set encoding=utf-8    " Set default encoding to UTF-8"
