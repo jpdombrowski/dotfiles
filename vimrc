@@ -131,7 +131,8 @@ let g:slime_target = "tmux"
 let g:slime_default_config = {"socket_name": "default", "target_pane": "1.2"}
 
 " Show current file in NERDTree
-map <silent> <Leader>s :NERDTree<CR><C-w>p:NERDTreeFind<CR>
+map <silent> <Leader>s :NERDTree<CR><C-w>p:NERDTreeFind<CR>:set cursorline<CR>
+
 
 " buffergator toggle (needs to be in .vimrc.before with janus)
 nnoremap <leader>b :BuffergatorToggle<CR>
