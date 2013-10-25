@@ -264,7 +264,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-color xoria256_new
+color xoria256
 
 python from powerline.vim import setup as powerline_setup
 python powerline_setup()
