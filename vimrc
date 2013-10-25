@@ -13,7 +13,7 @@ syntax enable         " Turn on syntax highlighting allowing local overrides
 set encoding=utf-8    " Set default encoding to UTF-8"
 set t_Co=256
 set t_ut=
-set noshowmode
+set noshowmode        " Don't show mode twice with powerline enabled
 set showcmd
 set hidden
 set laststatus=2      " Always show the status bar
@@ -80,8 +80,8 @@ if exists('+colorcolumn')
   set colorcolumn=80 " highlight column 80
 endif
 
-" Save when losing focus
-au FocusLost * :silent! wall
+" Save when losing focus (does not work in ubuntu terminal)
+au FocusLost * silent! wa
 
 " Searching
 set hlsearch    " highlight matches
