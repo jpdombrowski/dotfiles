@@ -100,6 +100,7 @@
 	rc = rebase --continue
 	ra = rebase --abort
 	rs = rebase --skip
+	ctags = !.git/hooks/ctags
 [git-up "bundler"]
 	check = false
 	autoinstall = false
@@ -116,3 +117,5 @@
 	default = matching
 [credential]
 	helper = store
+[init]
+	templatedir = ~/.git_template
