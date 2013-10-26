@@ -29,6 +29,24 @@ Bundle 'ddollar/nerdcommenter'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'jpalardy/vim-slime'
 Bundle 'jeffkreeftmeijer/vim-numbertoggle'
+" Snipmate dependencies
+" Bundle 'MarcWeber/vim-addon-mw-utils'
+" Bundle 'tomtom/tlib_vim'
+" Bundle 'garbas/vim-snipmate'
+
+" Add languages plugins
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'chrisbra/csv.vim'
+Bundle 'tpope/vim-git'
+Bundle 'tpope/vim-haml'
+Bundle 'pangloss/vim-javascript'
+Bundle 'tpope/vim-markdown'
+Bundle 'mmalecki/vim-node.js'
+Bundle 'skwp/vim-rspec'
+Bundle 'cakebaker/scss-syntax.vim'
+Bundle 'slim-template/vim-slim'
+Bundle 'timcharper/textile.vim'
+Bundle 'webgefrickel/vim-typoscript'
 
 " Custom xoria256 colorscheme
 Bundle 'jpdombrowski/xoria256.vim'
