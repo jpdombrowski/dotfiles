@@ -30,7 +30,9 @@ Bundle 'ddollar/nerdcommenter'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'jpalardy/vim-slime'
 Bundle 'jeffkreeftmeijer/vim-numbertoggle'
-" Snipmate dependencies
+" Bundle 'scrooloose/syntastic'
+
+" Snipmate + dependencies
 " Bundle 'MarcWeber/vim-addon-mw-utils'
 " Bundle 'tomtom/tlib_vim'
 " Bundle 'garbas/vim-snipmate'
@@ -51,6 +53,14 @@ Bundle 'webgefrickel/vim-typoscript'
 
 " Custom xoria256 colorscheme
 Bundle 'jpdombrowski/xoria256.vim'
+
+" Plugin Settings
+" Syntastic signs don't work atm, although they should...
+" let g:syntastic_enable_signs=1
+" let g:syntastic_check_on_open=1
+" let g:syntastic_quiet_warnings=0
+" let g:syntastic_auto_loc_list=2
+" let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': ['ruby, javascript'] }
 
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
