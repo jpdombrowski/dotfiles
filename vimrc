@@ -147,7 +147,7 @@ let g:NumberToggleTrigger="<leader>tn"
 " Show current file in NERDTree
 map <silent> <Leader>s :NERDTree<CR><C-w>p:NERDTreeFind<CR>:set cursorline<CR>
 
-
+map <leader>rt :TagbarOpenAutoClose<CR>
 
 
 map <C-F> :Ag<space>
