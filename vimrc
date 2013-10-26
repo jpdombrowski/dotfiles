@@ -162,7 +162,10 @@ map <leader>n :NERDTreeToggle<CR> :NERDTreeMirror<CR>
 command! KillWhitespace :normal :%s/ *$//g<cr><c-o><cr>
 
 " Use sudo to write file
-command W w !sudo tee % > /dev/null
+command! -bar SudoWrite :
+      \ setlocal nomodified |
+      \  exe (has('gui_running') ? '' : 'silent') 'write !sudo tee % >/dev/null' |
+      \ let &modified = v:shell_error
 
 " Disable things nobody needs.
 map Q <Nop>
