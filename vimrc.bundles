@@ -52,6 +52,9 @@ Bundle 'slim-template/vim-slim'
 Bundle 'timcharper/textile.vim'
 Bundle 'webgefrickel/vim-typoscript'
 
+" crunch time
+Bundle 'koron/nyancat-vim'
+
 " Custom xoria256 colorscheme
 Bundle 'jpdombrowski/xoria256.vim'
 
