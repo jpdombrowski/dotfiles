@@ -57,6 +57,9 @@ Bundle 'koron/nyancat-vim'
 
 " Custom xoria256 colorscheme
 Bundle 'jpdombrowski/xoria256.vim'
+" Colorschemes
+Bundle 'nanotech/jellybeans.vim'
+
 
 " Plugin Settings
 " Syntastic signs don't work atm, although they should...
