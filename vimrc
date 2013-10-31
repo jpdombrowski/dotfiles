@@ -226,6 +226,9 @@ map <Leader>a ggVG
 " Open last/alternate buffer
 map <Leader><Space> <C-^>
 
+" Open current file in background tab
+map <leader>te :tabedit %<CR>:tabprev<CR>
+
 " Improve up / down movement on wrapped lines
 nmap k gk
 nmap j gj
