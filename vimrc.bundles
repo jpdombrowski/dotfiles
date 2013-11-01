@@ -59,7 +59,8 @@ Bundle 'koron/nyancat-vim'
 Bundle 'jpdombrowski/xoria256.vim'
 " Colorschemes
 Bundle 'nanotech/jellybeans.vim'
-
+Bundle 'w0ng/vim-hybrid'
+Bundle 'jgdavey/vim-railscasts'
 
 " Plugin Settings
 " Syntastic signs don't work atm, although they should...
