@@ -31,6 +31,7 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'jeffkreeftmeijer/vim-numbertoggle'
 Bundle 'majutsushi/tagbar'
 Bundle 'benmills/vimux'
+Bundle 'skalnik/vim-vroom'
 
 " Bundle 'scrooloose/syntastic' " [TODO] fix signs
 
@@ -70,6 +71,9 @@ Bundle 'jgdavey/vim-railscasts'
 " let g:syntastic_quiet_warnings=0
 " let g:syntastic_auto_loc_list=2
 " let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': ['ruby, javascript'] }
+
+let g:vroom_use_vimux = 1
+let g:vroom_clear_screen = 0
 
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
