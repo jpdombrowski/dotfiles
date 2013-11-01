@@ -153,6 +153,17 @@ map <leader>rt :TagbarOpenAutoClose<CR>
 map <C-F> :Ag<space>
 map <leader>n :NERDTreeToggle<CR> :NERDTreeMirror<CR>
 
+function! VimuxSlime()
+  call VimuxOpenPane()
+  call VimuxSendText(@v)
+  call VimuxSendKeys("Enter")
+endfunction
+
+" If text is selected, save it in the v buffer and send that buffer to tmux
+vmap <leader>vs "vy :call VimuxSlime()<CR>
+
+" Select current paragraph and send it to tmux
+nmap <leader>vs vip<leader>vs<CR>
 
 
 " Automatically reload vimrc when it's saved

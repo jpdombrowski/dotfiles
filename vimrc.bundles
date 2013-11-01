@@ -28,10 +28,11 @@ Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'vim-scripts/ZoomWin'
 Bundle 'ddollar/nerdcommenter'
 Bundle 'terryma/vim-multiple-cursors'
-Bundle 'jpalardy/vim-slime'
 Bundle 'jeffkreeftmeijer/vim-numbertoggle'
 Bundle 'majutsushi/tagbar'
-" Bundle 'scrooloose/syntastic'
+Bundle 'benmills/vimux'
+
+" Bundle 'scrooloose/syntastic' " [TODO] fix signs
 
 " Snipmate + dependencies
 " Bundle 'MarcWeber/vim-addon-mw-utils'
