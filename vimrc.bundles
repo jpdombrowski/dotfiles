@@ -32,6 +32,7 @@ Bundle 'jeffkreeftmeijer/vim-numbertoggle'
 Bundle 'majutsushi/tagbar'
 Bundle 'benmills/vimux'
 Bundle 'skalnik/vim-vroom'
+Bundle 'goldfeld/vim-seek'
 
 " Bundle 'scrooloose/syntastic' " [TODO] fix signs
 
