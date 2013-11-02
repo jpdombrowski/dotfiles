@@ -68,6 +68,7 @@ alias devel="ssh dombrowski@devel"
 # easy directory access
 alias dbox="cd ~/Dropbox"
 alias notes="cd ~/Dropbox/Notes"
+alias dotfiles="cd ~/.dotfiles"
 
 export EDITOR="vim"
 
