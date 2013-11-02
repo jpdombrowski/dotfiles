@@ -5,6 +5,8 @@
 	insteadOf = lia:
 [url "https://github.com/"]
 	insteadOf = gh:
+[url "https://jpdombrowski@bitbucket.org/"]
+	insteadOf = bb:
 [color]
 	diff = auto
 	status = auto
