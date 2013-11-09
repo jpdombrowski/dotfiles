@@ -138,10 +138,6 @@ let g:buffergator_viewport_split_policy = "B"
 " map <leader>b :BuffergatorToggle<CR>
 " nnoremap <leader>b :BuffergatorToggle<CR>
 
-" vim-slime
-let g:slime_target = "tmux"
-let g:slime_default_config = {"socket_name": "default", "target_pane": "1.2"}
-
 let g:NumberToggleTrigger="<leader>tn"
 
 " Show current file in NERDTree
