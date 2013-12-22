@@ -118,6 +118,6 @@
 [push]
 	default = matching
 [credential]
-	helper = store
+	helper = osxkeychain
 [init]
 	templatedir = ~/.git_template
