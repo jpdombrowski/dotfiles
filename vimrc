@@ -116,8 +116,8 @@ set wildignore+=.svn,CVS,.git,.hg,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.j
 set wildmenu
 
 " More natural feeling split positions.
-set splitright
-set splitbelow
+" set splitright
+" set splitbelow
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
@@ -188,8 +188,8 @@ nnoremap <silent> # #zz
 nnoremap <silent> g* g*zz
 
 " Exit insert mode and save file
-map <C-s> <esc>:w<CR>
-imap <C-s> <esc>:w<CR>
+" map <C-s> <esc>:w<CR>
+" imap <C-s> <esc>:w<CR>
 
 " Exit insert mode not leavin home row
 inoremap jk <esc>
@@ -272,6 +272,7 @@ nnoremap <Right> 3<C-w>>
 
 color xoria256
 
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim/
+" python from powerline.vim import setup as powerline_setup
+" python powerline_setup()
+" python del powerline_setup
