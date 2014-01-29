@@ -16,9 +16,6 @@ compdef tat=tmux
 # Make aliases work with sudo
 alias sudo='sudo '
 
-# sublime text 2
-alias sb="subl"
-
 # git
 alias -r -- '+'="git add"
 alias -r -- '++'="git add ."
