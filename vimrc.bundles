@@ -34,6 +34,7 @@ Bundle 'benmills/vimux'
 Bundle 'skalnik/vim-vroom'
 Bundle 'goldfeld/vim-seek'
 Bundle 'editorconfig/editorconfig-vim'
+Bundle 'nathanaelkane/vim-indent-guides'
 
 " Bundle 'scrooloose/syntastic' " [TODO] fix signs
 
@@ -57,14 +58,14 @@ Bundle 'timcharper/textile.vim'
 Bundle 'webgefrickel/vim-typoscript'
 
 " crunch time
-Bundle 'koron/nyancat-vim'
+" Bundle 'koron/nyancat-vim'
 
 " Custom xoria256 colorscheme
 Bundle 'jpdombrowski/xoria256.vim'
 " Colorschemes
-Bundle 'nanotech/jellybeans.vim'
-Bundle 'w0ng/vim-hybrid'
-Bundle 'jgdavey/vim-railscasts'
+" Bundle 'nanotech/jellybeans.vim'
+" Bundle 'w0ng/vim-hybrid'
+" Bundle 'jgdavey/vim-railscasts'
 
 " Plugin Settings
 " Syntastic signs don't work atm, although they should...
@@ -73,6 +74,10 @@ Bundle 'jgdavey/vim-railscasts'
 " let g:syntastic_quiet_warnings=0
 " let g:syntastic_auto_loc_list=2
 " let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': ['ruby, javascript'] }
+
+let g:indent_guides_auto_colors = 0
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
 
 let g:vroom_use_vimux = 1
 let g:vroom_clear_screen = 0
