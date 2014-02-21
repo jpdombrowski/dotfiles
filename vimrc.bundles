@@ -35,6 +35,7 @@ Bundle 'skalnik/vim-vroom'
 Bundle 'goldfeld/vim-seek'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'mtth/scratch.vim'
 
 " Bundle 'scrooloose/syntastic' " [TODO] fix signs
 
