@@ -140,6 +140,9 @@ let g:buffergator_viewport_split_policy = "B"
 
 let g:NumberToggleTrigger="<leader>tn"
 
+" Open Scratch Bugger
+map <leader><leader> :Scratch<CR>
+
 " Show current file in NERDTree
 map <silent> <Leader>s :NERDTree<CR><C-w>p:NERDTreeFind<CR>:set cursorline<CR>
 
