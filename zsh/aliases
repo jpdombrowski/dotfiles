@@ -4,7 +4,7 @@ alias l="ll"
 alias ln='ln -v'
 alias mkdir='mkdir -p'
 # make <C-s> work in vim
-alias vim="stty stop '' -ixoff ; vim"
+# alias vim="stty stop '' -ixoff ; vim"
 # `Frozing' tty, so after any command terminal settings will be restored
 ttyctl -f
 alias vi="vim"
