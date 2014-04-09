@@ -1,6 +1,7 @@
 [user]
 	name = Jan-Philipp Dombrowski
-	email = jpdombrowski@gmail.com
+	; email = jpdombrowski@gmail.com
+	email = dombrowski@louis.info
 [url "https://git.louis-net.de/"]
 	insteadOf = lia:
 [url "https://github.com/"]
