@@ -36,6 +36,7 @@ Bundle 'goldfeld/vim-seek'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'mtth/scratch.vim'
+Bundle 'moll/vim-node'
 
 " Bundle 'scrooloose/syntastic' " [TODO] fix signs
 
@@ -49,9 +50,9 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'chrisbra/csv.vim'
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-haml'
-Bundle 'pangloss/vim-javascript'
+Bundle 'jelera/vim-javascript-syntax'
 Bundle 'tpope/vim-markdown'
-Bundle 'mmalecki/vim-node.js'
+" Bundle 'mmalecki/vim-node.js'
 Bundle 'skwp/vim-rspec'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'slim-template/vim-slim'
@@ -64,8 +65,8 @@ Bundle 'webgefrickel/vim-typoscript'
 " Custom xoria256 colorscheme
 Bundle 'jpdombrowski/xoria256.vim'
 " Colorschemes
-" Bundle 'nanotech/jellybeans.vim'
 " Bundle 'w0ng/vim-hybrid'
+" Bundle 'nanotech/jellybeans.vim'
 " Bundle 'jgdavey/vim-railscasts'
 
 " Plugin Settings
