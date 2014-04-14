@@ -6,7 +6,8 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Define bundles via Github repos
-Bundle 'tsaleh/vim-matchit'
+Bundle 'vim-scripts/matchit.zip'
+" Bundle 'tsaleh/vim-matchit'
 Bundle 'scrooloose/nerdtree'
 Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'kien/ctrlp.vim'
