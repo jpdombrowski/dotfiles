@@ -34,7 +34,10 @@ Bundle 'majutsushi/tagbar'
 Bundle 'benmills/vimux'
 Bundle 'skalnik/vim-vroom'
 Bundle 'goldfeld/vim-seek'
-Bundle 'editorconfig/editorconfig-vim'
+
+" editorconfig the guys are using is rubbish atm...
+" Bundle 'editorconfig/editorconfig-vim'
+
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'mtth/scratch.vim'
 Bundle 'moll/vim-node'
@@ -51,11 +54,17 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'chrisbra/csv.vim'
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-haml'
-Bundle 'jelera/vim-javascript-syntax'
 Bundle 'tpope/vim-markdown'
-" Bundle 'mmalecki/vim-node.js'
+Bundle 'jelera/vim-javascript-syntax'
+Bundle 'pangloss/vim-javascript'
+Bundle 'digitaltoad/vim-jade'
+Bundle 'wavded/vim-stylus'
+Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'skwp/vim-rspec'
+
+" Check if this is realy needed
 Bundle 'cakebaker/scss-syntax.vim'
+
 Bundle 'slim-template/vim-slim'
 Bundle 'timcharper/textile.vim'
 Bundle 'webgefrickel/vim-typoscript'
