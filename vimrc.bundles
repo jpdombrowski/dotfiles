@@ -83,7 +83,7 @@ Bundle 'jpdombrowski/xoria256.vim'
 let g:syntastic_enable_signs=1
 let g:syntastic_check_on_open=1
 " let g:syntastic_quiet_messages = {'level': 'warnings'}
-let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': ['ruby, javascript'] }
+" let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': ['ruby, javascript'] }
 
 let g:indent_guides_auto_colors = 0
 let g:indent_guides_enable_on_vim_startup = 1
