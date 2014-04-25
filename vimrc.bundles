@@ -42,7 +42,7 @@ Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'mtth/scratch.vim'
 Bundle 'moll/vim-node'
 
-" Bundle 'scrooloose/syntastic' " [TODO] fix signs
+Bundle 'scrooloose/syntastic'
 
 " Snipmate + dependencies
 " Bundle 'MarcWeber/vim-addon-mw-utils'
@@ -80,12 +80,10 @@ Bundle 'jpdombrowski/xoria256.vim'
 " Bundle 'jgdavey/vim-railscasts'
 
 " Plugin Settings
-" Syntastic signs don't work atm, although they should...
-" let g:syntastic_enable_signs=1
-" let g:syntastic_check_on_open=1
-" let g:syntastic_quiet_warnings=0
-" let g:syntastic_auto_loc_list=2
-" let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': ['ruby, javascript'] }
+let g:syntastic_enable_signs=1
+let g:syntastic_check_on_open=1
+" let g:syntastic_quiet_messages = {'level': 'warnings'}
+let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': ['ruby, javascript'] }
 
 let g:indent_guides_auto_colors = 0
 let g:indent_guides_enable_on_vim_startup = 1
