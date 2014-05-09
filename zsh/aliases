@@ -6,12 +6,13 @@ alias mkdir='mkdir -p'
 # make <C-s> work in vim
 # alias vim="stty stop '' -ixoff ; vim"
 # `Frozing' tty, so after any command terminal settings will be restored
-ttyctl -f
+# ttyctl -f
 alias vi="vim"
 alias v="vim"
 alias tlf='tail -f'
 alias tat='tmux attach -t'
 compdef tat=tmux
+alias cdg='cd "$(git rev-parse --show-toplevel)"'
 
 # Make aliases work with sudo
 alias sudo='sudo '
