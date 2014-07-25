@@ -55,7 +55,7 @@ SAVEHIST=4096
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 
-plugins=(rails safe-paste bundler brew gem npm pip)
+plugins=(rails safe-paste bundler brew gem pip)
 
 source $ZSH/oh-my-zsh.sh
 
