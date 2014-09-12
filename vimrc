@@ -273,7 +273,11 @@ nnoremap <Right> 3<C-w>>
 " nnoremap <Up> :echoe "Use k"<CR>
 " nnoremap <Down> :echoe "Use j"<CR>
 
-color xoria256
+color lucius
+LuciusWhiteHighContrast
+
+" hi IndentGuidesOdd                        ctermbg=234
+hi IndentGuidesEven                       ctermbg=255
 
 set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim/
 " python from powerline.vim import setup as powerline_setup
