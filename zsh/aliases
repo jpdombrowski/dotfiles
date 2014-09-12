@@ -12,6 +12,7 @@ alias v="vim"
 alias tlf='tail -f'
 alias tat='tmux attach -t'
 compdef tat=tmux
+alias tnew='tmux new -s'
 alias cdg='cd "$(git rev-parse --show-toplevel)"'
 
 # Make aliases work with sudo
