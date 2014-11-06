@@ -13,6 +13,7 @@ alias tlf='tail -f'
 alias tat='tmux attach -t'
 compdef tat=tmux
 alias tnew='tmux new -s'
+alias tsplit='tmux splitw -h'
 alias cdg='cd "$(git rev-parse --show-toplevel)"'
 
 # Make aliases work with sudo
