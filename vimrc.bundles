@@ -7,7 +7,6 @@ Bundle 'gmarik/vundle'
 
 " Define bundles via Github repos
 Bundle 'vim-scripts/matchit.zip'
-" Bundle 'tsaleh/vim-matchit'
 Bundle 'scrooloose/nerdtree'
 Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'kien/ctrlp.vim'
@@ -93,10 +92,10 @@ let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
 let g:vroom_use_vimux = 1
 let g:vroom_clear_screen = 0
 
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\.png$\|\.PNG$\|\.JPG$\|\.jpg$\|\.GIF$\|\.gif$\|\.pyc$\|\.pyo$\|\.rbc$|\.rbo$\|\.class$\|\.o$\|\~$\',
-  \ }
+" let g:ctrlp_custom_ignore = {
+"   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+"   \ 'file': '\.png$\|\.PNG$\|\.JPG$\|\.jpg$\|\.GIF$\|\.gif$\|\.pyc$\|\.pyo$\|\.rbc$|\.rbo$\|\.class$\|\.o$\|\~$\',
+"   \ }
 
 let NERDTreeIgnore=['\.pyc$', '\.pyo$', '\.rbc$', '\.rbo$', '\.class$', '\.o$', '\~$']
 augroup AuNERDTreeCmd
