@@ -104,6 +104,7 @@
 	ra = rebase --abort
 	rs = rebase --skip
 	ctags = !.git/hooks/ctags
+	permission-reset = !git diff -p -R | grep -E \"^(diff|(old|new) mode)\" | git apply
 [git-up "bundler"]
 	check = false
 	autoinstall = false
