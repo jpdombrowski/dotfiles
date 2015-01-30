@@ -46,11 +46,6 @@ DISABLE_CORRECTION="true"
 #   ls -lhG
 # }
 
-# Save a ton of history
-HISTSIZE=4096
-HISTFILE=~/.zsh_history
-SAVEHIST=4096
-
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
@@ -63,7 +58,14 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.dotfiles/zsh/aliases
 source $HOME/.dotfiles/zsh/functions
 
-# source $HOME/.dotfiles/zsh/completion/tmuxinator.zsh
+# save multiline cmds as single history entry
+set cmdhist
+
+export HISTFILE=~/.zsh_history
+export HISTSIZE=12000
+export HISTFILESIZE=12000
+export HISTTIMEFORMAT="%F %T "
+export HISTCONTROL=ignoredups:erasedups
 
 export VISUAL="vim"
 export EDITOR=$VISUAL
