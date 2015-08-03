@@ -1,23 +1,26 @@
+# Make aliases work with sudo
+alias sudo='sudo '
+
 # Unix
 alias ll="ls -lahG"
 alias l="ll"
 alias ln='ln -v'
 alias mkdir='mkdir -p'
+
 # make <C-s> work in vim
-# alias vim="stty stop '' -ixoff ; vim"
-# `Frozing' tty, so after any command terminal settings will be restored
-# ttyctl -f
+alias vim="stty stop '' -ixoff ; vim"
+#`Frozing' tty, so after any command terminal settings will be restored
+ttyctl -f
 alias vi="vim"
 alias v="vim"
+
 alias tlf='tail -f'
 alias tat='tmux attach -t'
 compdef tat=tmux
 alias tnew='tmux new -s'
 alias tsplit='tmux splitw -h'
-alias cdg='cd "$(git rev-parse --show-toplevel)"'
 
-# Make aliases work with sudo
-alias sudo='sudo '
+alias cdg='cd "$(git rev-parse --show-toplevel)"'
 
 # git
 alias -r -- '+'="git add -A"
@@ -30,12 +33,14 @@ alias gds="git ds"
 alias gdh="git dh"
 alias gdf="git diff --name-only"
 alias co="git checkout"
-# alias c="git checkout"
+alias c="git checkout"
+alias up="git up"
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+
+
 # alias gb="git branch"
 # alias b="git branch"
 # alias gcm="git checkout master"
 # alias gmm="git merge master"
 # alias grbm="git-on-master" # rebase current branch on master
 alias cm="commit-and-status" # [TODO] add git-hook for this
-alias up="git up"
-alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
