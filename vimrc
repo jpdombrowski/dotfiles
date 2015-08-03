@@ -9,6 +9,7 @@ endif
 filetype plugin indent on " Turn on filetype plugins
 
 set number            " Show line numbers
+set relativenumber    " use hybrid line number mode
 set numberwidth=5     " Bit more breathing room
 set ruler             " Show line and column number
 syntax enable         " Turn on syntax highlighting allowing local overrides
@@ -125,12 +126,8 @@ if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g "" --ignore-dir={"node*modules","log","*.jpg","tmp","*.png","*.gif","bower_components","dist"}'
 endif
-
-
-
-
 
 
 " buffergator splits horizontal bottom (full screen width)
@@ -138,31 +135,59 @@ let g:buffergator_viewport_split_policy = "B"
 " map <leader>b :BuffergatorToggle<CR>
 " nnoremap <leader>b :BuffergatorToggle<CR>
 
-let g:NumberToggleTrigger="<leader>tn"
-
-" Open Scratch Bugger
-map <leader><leader> :Scratch<CR>
-
 " Show current file in NERDTree
 map <silent> <Leader>s :NERDTree<CR><C-w>p:NERDTreeFind<CR>:set cursorline<CR>
 
 map <leader>rt :TagbarOpenAutoClose<CR>
 
 
+" ctrl-s for save
+command -nargs=0 -bar Update if &modified
+                           \|    if empty(bufname('%'))
+                           \|        browse confirm write
+                           \|    else
+                           \|        confirm write
+                           \|    endif
+                           \|endif
+
+nnoremap <silent> <C-S> :<C-u>Update<CR>
+inoremap <c-s> <Esc>:Update<CR>
+
 map <C-F> :Ag<space>
 map <leader>n :NERDTreeToggle<CR> :NERDTreeMirror<CR>
 
-function! VimuxSlime()
-  call VimuxOpenPane()
-  call VimuxSendText(@v)
-  call VimuxSendKeys("Enter")
-endfunction
+
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set norelativenumber
+  else
+    set relativenumber
+  endif
+endfunc
+
+nnoremap <leader>tn :call NumberToggle()<cr>
+
+" not working, dont know why...
+" augroup numtoggle
+"   au!
+"   au WinLeave * set norelativenumber
+"   au WinLeave * set relativenumber
+"   au InsertEnter * set norelativenumber
+"   au InsertLeave * set relativenumber
+" augroup END
+
+" disable vimux slime hotkeys for now
+" function! VimuxSlime()
+"   call VimuxOpenPane()
+"   call VimuxSendText(@v)
+"   call VimuxSendKeys("Enter")
+" endfunction
 
 " If text is selected, save it in the v buffer and send that buffer to tmux
-vmap <leader>vs "vy :call VimuxSlime()<CR>
+" vmap <leader>vs "vy :call VimuxSlime()<CR>
 
 " Select current paragraph and send it to tmux
-nmap <leader>vs vip<leader>vs<CR>
+" nmap <leader>vs vip<leader>vs<CR>
 
 
 " Automatically reload vimrc when it's saved
@@ -190,12 +215,14 @@ nnoremap <silent> N Nzz
 nnoremap <silent> # #zz
 nnoremap <silent> g* g*zz
 
-" Exit insert mode and save file
-" map <C-s> <esc>:w<CR>
-" imap <C-s> <esc>:w<CR>
-
 " Exit insert mode not leavin home row
-inoremap jk <esc>
+inoremap jk <ESC>
+
+" easy new lines in insert mode
+imap <C-o> <ESC>o
+
+" jump to end of line in insert mode
+imap <silent> <C-e> <ESC>A
 
 " Toggle paste mode
 nmap <silent> <F4> :set invpaste<CR>
@@ -244,10 +271,10 @@ nmap k gk
 nmap j gj
 
 " Jump to beginning / end
-imap <C-b> <C-o>^
-imap <C-e> <C-o>$
-cnoremap <C-b> <home>
-cnoremap <C-e> <end>
+" imap <C-b> <C-o>^
+" imap <C-e> <C-o>$
+" cnoremap <C-b> <home>
+" cnoremap <C-e> <end>
 
 " quick new tab
 map <C-t> <esc>:tabnew<CR>
@@ -273,11 +300,12 @@ nnoremap <Right> 3<C-w>>
 " nnoremap <Up> :echoe "Use k"<CR>
 " nnoremap <Down> :echoe "Use j"<CR>
 
-color lucius
-LuciusWhiteHighContrast
+color xoria256
+" color lucius
+" LuciusWhiteHighContrast
 
-" hi IndentGuidesOdd                        ctermbg=234
-hi IndentGuidesEven                       ctermbg=255
+hi IndentGuidesOdd                        ctermbg=234
+" hi IndentGuidesEven                       ctermbg=255
 
 set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim/
 " python from powerline.vim import setup as powerline_setup
