@@ -76,10 +76,10 @@ Plugin 'tpope/vim-haml'
 Plugin 'slim-template/vim-slim'
 Plugin 'wavded/vim-stylus'
 Plugin 'StanAngeloff/php.vim'
-Plugin 'webgefrickel/vim-typoscript'
 Plugin 'tpope/vim-markdown'
 Plugin 'timcharper/textile.vim'
-" Plugin 'chrisbra/csv.vim'
+" Plugin 'chrisbra/csv.vim' " looks ugly
+" Plugin 'webgefrickel/vim-typoscript' " dont need this anymore, ts sucks
 
 " Check if this is realy needed
 Plugin 'cakebaker/scss-syntax.vim'
