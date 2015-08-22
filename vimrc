@@ -138,8 +138,6 @@ let g:buffergator_viewport_split_policy = "B"
 " Show current file in NERDTree
 map <silent> <Leader>s :NERDTree<CR><C-w>p:NERDTreeFind<CR>:set cursorline<CR>
 
-map <leader>rt :TagbarOpenAutoClose<CR>
-
 
 " ctrl-s for save
 command -nargs=0 -bar Update if &modified
