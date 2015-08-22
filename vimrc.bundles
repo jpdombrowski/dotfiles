@@ -49,6 +49,9 @@ Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-rails'
+
+Plugin 'skwp/vim-rspec'
+Plugin 'sunaku/vim-ruby-minitest'
 " probably not using this enough to include it
 " Plugin 'nelstrom/vim-textobj-rubyblock'
 
@@ -72,7 +75,6 @@ Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'tpope/vim-haml'
 Plugin 'slim-template/vim-slim'
 Plugin 'wavded/vim-stylus'
-Plugin 'skwp/vim-rspec'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'webgefrickel/vim-typoscript'
 Plugin 'tpope/vim-markdown'
