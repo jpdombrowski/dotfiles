@@ -309,7 +309,5 @@ color xoria256
 hi IndentGuidesOdd                        ctermbg=234
 " hi IndentGuidesEven                       ctermbg=255
 
-if filereadable(".vimrc.local")
-  source $HOME/.vimrc.local
-endif
+source $HOME/.vimrc.local
 
