@@ -56,7 +56,7 @@ Plugin 'sunaku/vim-ruby-minitest'
 " Plugin 'nelstrom/vim-textobj-rubyblock'
 
 " activate if needed, usually not writing vanilla html
-" Plugin 'mattn/emmet-vim' " <C-V>, for lighting fast html coding
+Plugin 'mattn/emmet-vim' " <C-V>, for lighting fast html coding
 
 " editorconfig the guys are using is rubbish atm...
 " Plugin 'editorconfig/editorconfig-vim'
@@ -67,6 +67,7 @@ Plugin 'tpope/vim-git'
 Plugin 'pangloss/vim-javascript'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'moll/vim-node'
+Plugin 'mxw/vim-jsx'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'rust-lang/rust.vim'
 Plugin 'digitaltoad/vim-jade'
@@ -74,6 +75,7 @@ Plugin 'heartsentwined/vim-emblem'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'tpope/vim-haml'
 Plugin 'slim-template/vim-slim'
+Plugin 'AndrewRadev/vim-eco'
 Plugin 'wavded/vim-stylus'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'tpope/vim-markdown'
@@ -89,6 +91,7 @@ Plugin 'cakebaker/scss-syntax.vim'
 
 " Colorschemes
 Plugin 'jpdombrowski/xoria256.vim'
+" Plugin 'jdkanani/vim-material-theme'
 " Plugin 'cschlueter/vim-mustang'
 " Plugin 'goatslacker/mango.vim'
 " Plugin 'jonathanfilip/vim-lucius'
@@ -106,12 +109,12 @@ let g:gundo_preview_bottom = 1
 let g:gundo_close_on_revert = 1
 
 " Cosco config (semicolon insertion)
-autocmd FileType javascript nnoremap <silent> <Leader>; :call cosco#commaOrSemiColon()<CR>
-autocmd FileType javascript inoremap <silent> <Leader>; <c-o>:call cosco#commaOrSemiColon()<CR><Esc>
+autocmd FileType javascript,javascript.jsx,c nnoremap <silent> <Leader>; :call cosco#commaOrSemiColon()<CR>
+autocmd FileType javascript,javascript.jsx,c inoremap <silent> <Leader>; <c-o>:call cosco#commaOrSemiColon()<CR><Esc>
 
 " Emmet config
-" let g:user_emmet_install_global = 0
-" autocmd FileType html,eruby EmmetInstall
+let g:user_emmet_install_global = 0
+autocmd FileType html,eruby,handlebars EmmetInstall
 
 " UltiSnops config
 let g:UltiSnipsEditSplit="vertical"
