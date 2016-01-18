@@ -1,0 +1,40 @@
+# autojump
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+
+# prefer vi key bindings over emacs (doesn't work well)
+# bindkey -v
+
+# ssh shortcuts
+alias devel="ssh 192.168.22.11"
+alias t3dev="ssh 192.168.22.31"
+alias magedev="ssh 192.168.22.23"
+
+# alias jpdev="ssh -p 3022 127.0.0.1"
+
+# boot jp-devel vm
+# alias jpdev-boot="VBoxHeadless --startvm jp-devel --vrde off"
+
+# export CC="gcc-4.2"
+export CC=/usr/bin/gcc
+
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
+
+# Setup rbenv
+eval "$(rbenv init - --no-rehash)"
+
+# shift binstubs into PATH
+export PATH="./bin:$PATH"
+
+# set nvm install dir to work with brewed nvm
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+source <(npm completion)
+
+# Fix up and down arrow keys for browsing history
+bindkey '[A' up-line-or-search
+bindkey '[B' down-line-or-search
+bindkey 'OA' up-line-or-search
+bindkey 'OB' down-line-or-search
