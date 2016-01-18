@@ -83,6 +83,10 @@ if exists('+colorcolumn')
   set colorcolumn=80 " highlight column 80
 endif
 
+" set filetypes
+au BufNewFile,BufRead *.jscsrc set filetype=javascript
+au BufNewFile,BufRead *.jsx.erb set filetype=javascript.jsx
+
 " Save when losing focus (does not work in ubuntu terminal)
 au FocusLost * silent! wa
 
