@@ -130,7 +130,7 @@ if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g "" --ignore-dir={"node*modules", "build", "log","*.jpg","tmp","*.png","*.gif","bower_components","dist"}'
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g "" --ignore-dir={"node*modules","build","log","*.jpg","tmp","*.png","*.gif","bower_components","dist"}'
 endif
 
 
@@ -309,7 +309,7 @@ color xoria256
 hi IndentGuidesOdd                        ctermbg=234
 " hi IndentGuidesEven                       ctermbg=255
 
-set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim/
-" python from powerline.vim import setup as powerline_setup
-" python powerline_setup()
-" python del powerline_setup
+if filereadable(".vimrc.local")
+  source $HOME/.vimrc.local
+endif
+
