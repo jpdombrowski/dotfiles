@@ -31,6 +31,7 @@ export PATH="./bin:$PATH"
 # set nvm install dir to work with brewed nvm
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
+
 source <(npm completion)
 
 # Fix up and down arrow keys for browsing history
@@ -38,3 +39,6 @@ bindkey '[A' up-line-or-search
 bindkey '[B' down-line-or-search
 bindkey 'OA' up-line-or-search
 bindkey 'OB' down-line-or-search
+
+# load avn
+[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh"
