@@ -1,5 +1,5 @@
 # zpython module
-module_path=($module_path /usr/local/lib/zpython)
+# module_path=($module_path /usr/local/lib/zpython)
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
@@ -52,6 +52,8 @@ DISABLE_CORRECTION="true"
 
 plugins=(rails safe-paste bundler brew gem pip)
 
+export LC_CTYPE=en_US.UTF-8
+
 source $ZSH/oh-my-zsh.sh
 
 # source custom files
@@ -71,6 +73,9 @@ export VISUAL="vim"
 export EDITOR=$VISUAL
 
 export TERM="xterm-256color"
+
+# export LC_ALL=de_DE.UTF-8
+# export LANG=en_US.UTF-8
 
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local

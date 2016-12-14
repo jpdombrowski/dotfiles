@@ -25,6 +25,7 @@ function commit-and-status {
 
 # [TODO] write add-and-status, unstage-and-status functions!
 
-function rrg {
-  rake routes | grep $1
+function fancy-diff {
+  git diff --color $@ | diff-so-fancy | less -C
 }
+
