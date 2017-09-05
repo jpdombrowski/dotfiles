@@ -86,6 +86,8 @@ endif
 " set filetypes
 au BufNewFile,BufRead *.jscsrc set filetype=javascript
 au BufNewFile,BufRead *.jsx.erb set filetype=javascript.jsx
+au BufReadPost *.conf set syntax=ini
+au BufReadPost .babelrc set syntax=json
 
 " Save when losing focus (does not work in ubuntu terminal)
 au FocusLost * silent! wa

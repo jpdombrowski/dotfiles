@@ -5,6 +5,9 @@ call vundle#rc()
 " let vundle manage Vundle
 Plugin 'gmarik/vundle'
 
+" vim wiki
+" Plugin 'vimwiki/vimwiki'
+
 " Define bundles via Github repos
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'scrooloose/nerdtree' " leader n to show dir tree
@@ -62,6 +65,7 @@ Plugin 'mattn/emmet-vim' " <C-V>, for lighting fast html coding
 " Plugin 'editorconfig/editorconfig-vim'
 
 " Add languages plugins
+Plugin 'posva/vim-vue'
 Plugin 'othree/html5.vim'
 Plugin 'tpope/vim-git'
 Plugin 'othree/yajs.vim'

@@ -28,6 +28,10 @@ eval "$(rbenv init - --no-rehash)"
 # shift binstubs into PATH
 export PATH="./bin:$PATH"
 
+# shft dev scripts into PATH
+
+export PATH="$HOME/dev/scripts:$PATH"
+
 # set nvm install dir to work with brewed nvm
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
@@ -39,6 +43,11 @@ bindkey '[A' up-line-or-search
 bindkey '[B' down-line-or-search
 bindkey 'OA' up-line-or-search
 bindkey 'OB' down-line-or-search
+
+# Completion
+if which kubectl > /dev/null; then
+  source <(kubectl completion zsh)
+fi
 
 # load avn
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh"
