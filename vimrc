@@ -49,6 +49,10 @@ if has('persistent_undo')
   set undoreload=10000
 endif
 
+if has('gui_running')
+  set guifont=DejaVu_Sans_Mono_for_Powerline:h11
+endif
+
 " Whitespace, softtabs, 2 spaces
 set nowrap
 set tabstop=2
@@ -72,33 +76,40 @@ set showbreak=↪ " Visualize wrapped lines when wrap toggled
 
 " only show cursorline in the current window and in normal mode
 set cursorline
+
 augroup cline
   au!
   au WinLeave * set nocursorline
   au WinEnter * set cursorline
   au InsertEnter * set nocursorline
   au InsertLeave * set cursorline
+  au BufNewFile,BufRead *.jscsrc set filetype=javascript
+  au BufNewFile,BufRead *.jsx.erb set filetype=javascript.jsx
+  au BufReadPost *.conf set syntax=ini
+  au BufReadPost .babelrc set syntax=json
+  " When editing a file, always jump to the last known cursor position.
+  " Don't do it for commit messages, when the position is invalid, or when
+  " inside an event handler (happens when dropping a file on gvim).
+  au BufReadPost *
+    \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
+    \   exe "normal g`\"" |
+    \ endif
 augroup END
+
+augroup vimrc
+  autocmd!
+  autocmd BufWinEnter,Syntax * syn sync minlines=500 maxlines=500
+augroup END
+
 if exists('+colorcolumn')
   set colorcolumn=80 " highlight column 80
 endif
 
 " set filetypes
-au BufNewFile,BufRead *.jscsrc set filetype=javascript
-au BufNewFile,BufRead *.jsx.erb set filetype=javascript.jsx
-au BufReadPost *.conf set syntax=ini
-au BufReadPost .babelrc set syntax=json
 
 " Save when losing focus (does not work in ubuntu terminal)
-au FocusLost * silent! wa
+" au FocusLost * silent! wa
 
-" When editing a file, always jump to the last known cursor position.
-" Don't do it for commit messages, when the position is invalid, or when
-" inside an event handler (happens when dropping a file on gvim).
-autocmd BufReadPost *
-  \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
-  \   exe "normal g`\"" |
-  \ endif
 
 " Searching
 set hlsearch    " highlight matches
@@ -294,10 +305,10 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-nnoremap <Up>    3<C-w>-
-nnoremap <Down>  3<C-w>+
-nnoremap <Left>  3<C-w><
-nnoremap <Right> 3<C-w>>
+" nnoremap <Up>    3<C-w>-
+" nnoremap <Down>  3<C-w>+
+" nnoremap <Left>  3<C-w><
+" nnoremap <Right> 3<C-w>>
 
 " nnoremap <Left> :echoe "Use h"<CR>
 " nnoremap <Right> :echoe "Use l"<CR>

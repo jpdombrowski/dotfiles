@@ -1,4 +1,4 @@
-autocmd FileType javascript set formatprg=prettier\ --stdin\ --single-quote\ --bracket-spacing\ false
+" autocmd FileType javascript set formatprg=prettier\ --stdin\ --single-quote\ --bracket-spacing\ false
 
 set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim/
 

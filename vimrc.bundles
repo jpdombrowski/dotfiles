@@ -20,15 +20,15 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'goldfeld/vim-seek' " in nmode: s xx to jumo to 2 chars
 Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'vim-scripts/ZoomWin' " ctrl w o to zoom win
+" Plugin 'vim-scripts/ZoomWin' " ctrl w o to zoom win
 Plugin 'ddollar/nerdcommenter' " leader , to comment in v mode
 Plugin 'terryma/vim-multiple-cursors' " ctrl n to add cursor (ctrl p and ctrl x)
-Plugin 'SirVer/ultisnips'
-Plugin 'scrooloose/syntastic' " syntax check on save, options below
+" Plugin 'SirVer/ultisnips'
+" Plugin 'scrooloose/syntastic' " syntax check on save, options below
 Plugin 'lfilho/cosco.vim' " semicolon insertion with leader ; in imode and nmode
 
 " evaluate
-Plugin 'marijnh/tern_for_vim'
+" Plugin 'marijnh/tern_for_vim'
 
 " replace with YouCompleteMe?
 Plugin 'ervandew/supertab' " autocomplete from all open buffers
@@ -49,17 +49,17 @@ Plugin 'michaeljsmith/vim-indent-object' " select based on indent vai, vii
 " ruby plugins
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-rake'
-Plugin 'tpope/vim-rails'
+" Plugin 'tpope/vim-bundler'
+" Plugin 'tpope/vim-rake'
+" Plugin 'tpope/vim-rails'
 
-Plugin 'skwp/vim-rspec'
-Plugin 'sunaku/vim-ruby-minitest'
+" Plugin 'skwp/vim-rspec'
+" Plugin 'sunaku/vim-ruby-minitest'
 " probably not using this enough to include it
 " Plugin 'nelstrom/vim-textobj-rubyblock'
 
 " activate if needed, usually not writing vanilla html
-Plugin 'mattn/emmet-vim' " <C-V>, for lighting fast html coding
+" Plugin 'mattn/emmet-vim' " <C-V>, for lighting fast html coding
 
 " editorconfig the guys are using is rubbish atm...
 " Plugin 'editorconfig/editorconfig-vim'
@@ -71,33 +71,37 @@ Plugin 'tpope/vim-git'
 Plugin 'othree/yajs.vim'
 " Plugin 'pangloss/vim-javascript'
 " Plugin 'jelera/vim-javascript-syntax'
-Plugin 'keith/swift.vim'
+" Plugin 'keith/swift.vim'
+Plugin 'vim-scripts/indentpython.vim'
 Plugin 'moll/vim-node'
-Plugin 'mxw/vim-jsx'
+" Plugin 'mxw/vim-jsx'
 Plugin 'leafgarland/typescript-vim'
-Plugin 'kchmck/vim-coffee-script'
+" Plugin 'kchmck/vim-coffee-script'
 Plugin 'rust-lang/rust.vim'
 Plugin 'digitaltoad/vim-jade'
-Plugin 'heartsentwined/vim-emblem'
+" Plugin 'heartsentwined/vim-emblem'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'tpope/vim-haml'
-Plugin 'slim-template/vim-slim'
-Plugin 'AndrewRadev/vim-eco'
-Plugin 'wavded/vim-stylus'
+" Plugin 'slim-template/vim-slim'
+" Plugin 'AndrewRadev/vim-eco'
+" Plugin 'wavded/vim-stylus'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'tpope/vim-markdown'
-Plugin 'timcharper/textile.vim'
+" Plugin 'timcharper/textile.vim'
 " Plugin 'chrisbra/csv.vim' " looks ugly
 " Plugin 'webgefrickel/vim-typoscript' " dont need this anymore, ts sucks
 
 " Check if this is realy needed
 Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'chr4/nginx.vim'
 
 " only enable when needed
 " Plugin 'guns/xterm-color-table.vim'
 
 " Colorschemes
 Plugin 'jpdombrowski/xoria256.vim'
+Plugin 'jeffkreeftmeijer/vim-dim'
+" Plugin 'NLKNguyen/papercolor-theme'
 " Plugin 'jdkanani/vim-material-theme'
 " Plugin 'cschlueter/vim-mustang'
 " Plugin 'goatslacker/mango.vim'
@@ -109,6 +113,9 @@ Plugin 'jpdombrowski/xoria256.vim'
 
 " Plugin Settings
 
+" vim-vue speed up
+let g:vue_disable_pre_processors=1
+
 " Gundo config (undo tree)
 nnoremap <F5> :GundoToggle<CR>
 let g:gundo_right = 1
@@ -119,9 +126,9 @@ let g:gundo_close_on_revert = 1
 autocmd FileType javascript,javascript.jsx,c nnoremap <silent> <Leader>; :call cosco#commaOrSemiColon()<CR>
 autocmd FileType javascript,javascript.jsx,c inoremap <silent> <Leader>; <c-o>:call cosco#commaOrSemiColon()<CR><Esc>
 
-" Emmet config
-let g:user_emmet_install_global = 0
-autocmd FileType html,eruby,handlebars EmmetInstall
+" Emmet config - currently uninstalled!
+" let g:user_emmet_install_global = 0
+" autocmd FileType html,eruby,handlebars EmmetInstall
 
 " UltiSnops config
 let g:UltiSnipsEditSplit="vertical"

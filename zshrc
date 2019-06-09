@@ -64,8 +64,8 @@ source $HOME/.dotfiles/zsh/functions
 set cmdhist
 
 export HISTFILE=~/.zsh_history
-export HISTSIZE=12000
-export HISTFILESIZE=12000
+export HISTSIZE=120000
+export HISTFILESIZE=120000
 export HISTTIMEFORMAT="%F %T "
 export HISTCONTROL=ignoredups:erasedups
 
@@ -79,3 +79,6 @@ export TERM="xterm-256color"
 
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
+# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+

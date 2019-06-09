@@ -1,6 +1,8 @@
 [user]
 	name = Jan-Philipp Dombrowski
 	email = jpdombrowski@gmail.com
+; [url "https://gitlab.louis-net.de/"]
+;   insteadOf = git@gitlab.louis-net.de:
 [url "https://github.com/"]
 	insteadOf = gh:
 [url "https://jpdombrowski@bitbucket.org/"]
